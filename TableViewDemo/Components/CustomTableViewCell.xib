@@ -14,27 +14,27 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomTableViewCell" rowHeight="115" id="KGk-i7-Jjw" customClass="CustomTableViewCell" customModule="TableViewDemo" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="329" height="115"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomTableViewCell" rowHeight="142" id="KGk-i7-Jjw" customClass="CustomTableViewCell" customModule="TableViewDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="329" height="142"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="329" height="114.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="329" height="141.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TIO-Le-8cZ">
-                        <rect key="frame" x="0.0" y="0.0" width="114.5" height="114.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="141.5" height="141.5"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="TIO-Le-8cZ" secondAttribute="height" multiplier="1:1" id="xik-Ry-HVW"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qoU-n4-DGl">
-                        <rect key="frame" x="119.5" y="16" width="188.5" height="21"/>
+                        <rect key="frame" x="146.5" y="16" width="161.5" height="21"/>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tG0-70-QBl">
-                        <rect key="frame" x="119.5" y="42" width="188.5" height="20.5"/>
+                        <rect key="frame" x="146.5" y="42" width="161.5" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -58,7 +58,7 @@
                 <outlet property="mImage" destination="TIO-Le-8cZ" id="9nG-Q3-0gE"/>
                 <outlet property="mTitleLabel" destination="qoU-n4-DGl" id="5xx-qd-s2l"/>
             </connections>
-            <point key="canvasLocation" x="29.5" y="87.5"/>
+            <point key="canvasLocation" x="29.5" y="74"/>
         </tableViewCell>
     </objects>
 </document>

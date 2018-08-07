@@ -1,0 +1,19 @@
+{
+    "data": [
+             {
+             "image": "A",
+             "title": "title 1",
+             "detail": "details 1"
+             },
+             {
+             "image": "B",
+             "title": "title 2",
+             "detail": "details 2"
+             },
+             {  
+             "image": "C",
+             "title": "title 3",
+             "detail": "details 3"
+             }
+             ]
+}

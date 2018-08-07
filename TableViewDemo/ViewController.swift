@@ -10,9 +10,8 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITabBarDelegate {
     @IBOutlet weak var mTableView: UITableView!
-    var arrImages = ["A", "B", "C"]
-    var arrTitle = ["Chu","Chu","Chu"]
-    var arrDetail = ["Chu A","Chu B","Chu C"]
+   
+    var arrData : [SampleVO] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,9 +19,29 @@ class ViewController: UIViewController, UITableViewDataSource, UITabBarDelegate 
         //register cell for table
         mTableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomTableViewCell")
         mTableView.rowHeight = 100
-        
+        loadDataLocal()
     }
 
+    func loadDataLocal() {
+        if let path = Bundle.main.path(forResource: "data", ofType: "json")
+        {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
+                if let jsonResult = jsonResult as? Dictionary<String, AnyObject>, let listData = jsonResult["data"] as? [Any] {
+                    for item in listData {
+                       let i = SampleVO(data: item as! [String : AnyObject])
+                            arrData.append(i)
+                    }
+                   
+                    mTableView.reloadData()
+                }
+            } catch {
+                // handle error
+            }
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -36,12 +55,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITabBarDelegate 
     
     //MARK: UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrImages.count
+        return arrData.count
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath) as! CustomTableViewCell
-        cell.setdata(title: arrTitle[indexPath.row], detail: arrDetail[indexPath.row], image: arrImages[indexPath.row])
+        cell.setdata(data: arrData[indexPath.row])
         
         return cell
     }

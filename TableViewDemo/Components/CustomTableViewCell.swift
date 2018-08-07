@@ -18,10 +18,10 @@ class CustomTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    func setdata(title: String, detail: String, image: String) {
-        mImage.image = UIImage(named: image)
-        mTitleLabel.text = title
-        mDetailLabel.text = detail
+    func setdata(data: SampleVO) {
+        mImage.image = UIImage(named: data.image)
+        mTitleLabel.text = data.title
+        mDetailLabel.text = data.detail
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
